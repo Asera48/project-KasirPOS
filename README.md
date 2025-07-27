@@ -1,61 +1,57 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Aplikasi Kasir (POS) Berbasis Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Tampilan Dasbor Kasir](https://i.imgur.com/lFe8fRE.png) 
+Aplikasi ini adalah sistem Point of Sale (POS) berbasis web, dibangun menggunakan Laravel 12. Dirancang untuk mengelola operasional toko ritel skala kecil hingga menengah, aplikasi ini mencakup fungsionalitas manajemen transaksi, inventaris, pelanggan, dan laporan dalam satu platform yang mudah digunakan.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Aplikasi ini dilengkapi dengan berbagai fitur yang terbagi menjadi dua peran utama: **Admin** dan **Kasir**.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Fitur Kasir
+- **Dasbor Point of Sale (POS):** Antarmuka utama yang cepat dan responsif untuk melakukan transaksi.
+- **Pencarian Produk Real-time:** Cari produk secara instan berdasarkan nama atau barcode/SKU tanpa me-refresh halaman.
+- **Manajemen Keranjang:** Tambah, ubah kuantitas, dan hapus item dari keranjang dengan mudah.
+- **Penerapan Diskon Otomatis:** Sistem secara otomatis menghitung diskon produk (persentase atau tetap) yang sedang aktif.
+- **Sistem Poin Member:**
+    - Pilih pelanggan terdaftar untuk setiap transaksi.
+    - Tukarkan (redeem) poin member sebagai potongan harga.
+    - Poin baru akan otomatis ditambahkan setelah transaksi selesai.
+- **Perhitungan Otomatis:** Sistem secara otomatis menghitung subtotal, pajak (dengan tarif dinamis), pembulatan, dan uang kembalian.
+- **Riwayat Transaksi:** Kasir dapat melihat riwayat transaksi yang telah mereka lakukan sendiri, lengkap dengan filter tanggal.
+- **Cetak Struk:** Cetak struk transaksi yang rapi dan informatif.
 
-## Learning Laravel
+### Fitur Admin
+- **Dasbor Analitik:** Menampilkan ringkasan statistik bisnis, termasuk total produk, transaksi, pengguna, serta grafik pendapatan 7 hari terakhir.
+- **Panel Informasi Cepat:** Menampilkan daftar "Produk Terlaris" dan "Stok Akan Habis" secara dinamis.
+- **Manajemen Produk (CRUD):** Pengelolaan penuh data produk, termasuk nama, kategori, harga jual, harga pokok, stok, barcode, dan upload gambar.
+- **Manajemen Inventaris:**
+    - **Pengadaan Barang:** Catat barang masuk dari supplier secara manual atau melalui **impor dari file Excel**.
+    - **Stok Opname:** Lakukan penyesuaian stok fisik dengan stok di sistem.
+- **Manajemen Penjualan:**
+    - **Diskon:** Kelola diskon berbasis periode untuk produk tertentu.
+    - **Member:** Pengelolaan penuh data pelanggan (member) dan riwayat perolehan/penukaran poin mereka.
+- **Manajemen Umum (CRUD):**
+    - **Supplier:** Kelola data pemasok barang.
+    - **Pengguna:** Kelola akun untuk admin dan kasir.
+- **Laporan:**
+    - **Laporan Penjualan:** Lihat laporan penjualan dengan filter rentang tanggal, lengkap dengan ringkasan pendapatan dan laba. Fitur **Cetak** dan **Ekspor ke Excel**.
+    - **Laporan Stok:** Lihat laporan stok produk dan filter produk yang stoknya menipis.
+- **Pengaturan Sistem:**
+    - **Pengaturan Aplikasi:** Ubah nama aplikasi, logo, alamat, dan nomor telepon toko secara dinamis.
+    - **Metode Pembayaran:** Tambah, edit, atau nonaktifkan metode pembayaran 
+    - **Log Aktivitas:** Pantau semua aktivitas penting yang terjadi di dalam sistem.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Teknologi yang Digunakan
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **Backend:** Laravel 12 (PHP 8.3)
+- **Frontend:** Tailwind CSS 3, Alpine.js
+- **Database:** MySQL
+- **Server Lokal:** Laragon
+- **Paket Utama:**
+    - `laravel/breeze`: Untuk sistem otentikasi.
+    - `laravel/sanctum`: Untuk otentikasi API.
+    - `maatwebsite/excel`: Untuk fitur impor dan ekspor data Excel.

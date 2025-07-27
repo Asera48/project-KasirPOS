@@ -27,7 +27,7 @@ class ActivityLog extends Model
     public static function addLog(string $action, string $description): void
     {
         self::create([
-            'user_id' => Auth::id(), // Mengambil ID pengguna yang sedang login secara otomatis
+            'user_id' => Auth::id(), 
             'action' => $action,
             'description' => $description,
         ]);

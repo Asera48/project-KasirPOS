@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dasbor Admin') }}
+            {{ __('Dashboard Admin') }}
         </h2>
     </x-slot>
 
@@ -39,7 +39,7 @@
                     <x-dashboard.sales-chart />
                 </div>
 
-                {{-- PERBAIKAN: Menggunakan flexbox untuk menata panel kanan --}}
+                {{-- Menggunakan flexbox untuk menata panel kanan --}}
                 <div class="flex flex-col space-y-6">
                     <x-dashboard.bestselling-products :products="$bestsellingProducts" />
                     <x-dashboard.low-stock-products :products="$lowStockProducts" />

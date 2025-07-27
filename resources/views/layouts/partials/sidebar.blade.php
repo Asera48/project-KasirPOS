@@ -50,7 +50,7 @@
 
         </x-nav-link>
         <h3 class="px-3 mt-6 mb-2 text-xs font-semibold tracking-wider text-gray-500 uppercase">Manajemen Produk</h3>
-        <x-nav-link :href="route('admin.products.index')" :active="request()->routeIs('products.*')">
+        <x-nav-link :href="route('admin.products.index')" :active="request()->routeIs('admin.products.*')">
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -58,7 +58,7 @@
             </svg>
             <span>Produk</span>
         </x-nav-link>
-        <x-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('categories.*')">
+        <x-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories.*')">
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round"
