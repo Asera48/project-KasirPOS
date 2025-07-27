@@ -2,7 +2,7 @@
 
 ![Tampilan Dasbor Kasir](https://i.imgur.com/lFe8fRE.png) 
 Aplikasi ini adalah sistem Point of Sale (POS) berbasis web, dibangun menggunakan Laravel 12. Dirancang untuk mengelola operasional toko ritel skala kecil hingga menengah, aplikasi ini mencakup fungsionalitas manajemen transaksi, inventaris, pelanggan, dan laporan dalam satu platform yang mudah digunakan. 
-Galeri screenshot [here](http://bit.ly/3TXc9r5).
+Galeri screenshot [here](https://drive.google.com/drive/folders/1uqrMMeLXBy0qQEEtIlUaGfoILd37Nw2d?usp=sharing).
 ---
 
 ## Fitur Utama
